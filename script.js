@@ -66,3 +66,9 @@ function handleSubmit(event) {
         document.getElementById('submitStatus').innerHTML = '';
     }, 1500);
 }
+// Copy to clipboard function
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(() => {
+        alert('Copied: ' + text);
+    });
+}
