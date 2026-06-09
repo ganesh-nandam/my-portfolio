@@ -747,85 +747,187 @@ h2:hover {
     background: rgba(51, 65, 85, 0.3);
 }
 
-.contact-container {
-    max-width: 600px;
+.contact-wrapper {
+    max-width: 1400px;
     margin: 0 auto;
     width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
 }
 
-.contact-title {
+/* Left Side - Contact Info */
+.contact-info-side {
+    padding: 2rem 0;
+}
+
+.contact-info-side h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Contact Cards Grid - Stacked Vertically */
+.contact-cards-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Contact Cards */
+.contact-card {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(30, 41, 59, 0.6) 100%);
+    border: 1px solid rgba(96, 165, 250, 0.3);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+    animation: slideUp 0.6s ease-out;
+}
+
+.contact-card:hover {
+    border-color: rgba(96, 165, 250, 0.6);
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.95) 0%, rgba(30, 41, 59, 0.75) 100%);
+    transform: translateX(5px);
+    box-shadow: 0 10px 30px rgba(96, 165, 250, 0.15);
+}
+
+.contact-card-icon {
+    font-size: 2rem;
+    min-width: 50px;
     text-align: center;
 }
 
-.form-container {
-    background: rgba(30, 41, 59, 0.6);
-    border: 1px solid rgba(148, 163, 184, 0.2);
+.contact-card-content {
+    flex: 1;
+}
+
+.contact-label {
+    font-size: 0.85rem;
+    color: #a78bfa;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: 1px;
+}
+
+.contact-value {
+    font-size: 1.1rem;
+    color: #e2e8f0;
+    margin: 0;
+    font-weight: 600;
+}
+
+.copy-btn {
+    background: rgba(96, 165, 250, 0.2);
+    border: 1px solid rgba(96, 165, 250, 0.3);
+    color: #60a5fa;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.copy-btn:hover {
+    background: rgba(96, 165, 250, 0.4);
+    transform: scale(1.05);
+}
+
+/* Right Side - Form */
+.contact-form-side {
+    padding: 2rem;
+}
+
+.form-heading {
+    font-size: 1.3rem;
+    color: #a78bfa;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    margin-top: 0;
+}
+
+.form-container-new {
+    background: rgba(30, 41, 59, 0.7);
+    border: 1px solid rgba(96, 165, 250, 0.2);
     border-radius: 12px;
     padding: 2rem;
     animation: slideUp 0.8s ease-out;
-    transition: all 0.3s ease;
 }
 
-.form-container:hover {
-    border-color: rgba(96,165,250,0.3);
-    background: rgba(30, 41, 59, 0.8);
-}
-
-.form-group {
+.form-group-new {
     margin-bottom: 1.5rem;
 }
 
-.form-group label {
+.form-group-new label {
     display: block;
-    margin-bottom: 0.5rem;
     color: #cbd5e1;
     font-weight: 600;
     font-size: 0.95rem;
-    transition: all 0.3s ease;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
 }
 
-.form-group input {
+.form-group-new input,
+.form-group-new textarea {
     width: 100%;
-    padding: 0.8rem 1rem;
-    background: rgba(15, 23, 42, 0.5);
-    border: 1px solid rgba(148, 163, 184, 0.2);
+    padding: 1rem;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(96, 165, 250, 0.2);
     border-radius: 8px;
     color: #e2e8f0;
     font-size: 1rem;
+    font-family: inherit;
     transition: all 0.3s ease;
     outline: none;
 }
 
-.form-group input:focus {
-    border-color: rgba(96,165,250,0.5);
+.form-group-new input::placeholder,
+.form-group-new textarea::placeholder {
+    color: #64748b;
+}
+
+.form-group-new input:focus,
+.form-group-new textarea:focus {
+    border-color: rgba(96, 165, 250, 0.6);
     background: rgba(15, 23, 42, 0.8);
-    box-shadow: 0 0 20px rgba(96,165,250,0.2);
+    box-shadow: 0 0 20px rgba(96, 165, 250, 0.2);
     transform: translateY(-2px);
 }
 
-.form-group input:hover {
-    border-color: rgba(96,165,250,0.3);
-}
-
-.submit-btn {
+.submit-btn-new {
     width: 100%;
     padding: 1rem;
     background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
     color: #0f172a;
     border: none;
     border-radius: 8px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     cursor: pointer;
     transition: all 0.3s ease;
+    margin-top: 1rem;
 }
 
-.submit-btn:hover {
+.submit-btn-new:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(96,165,250,0.3);
+    box-shadow: 0 15px 40px rgba(96, 165, 250, 0.3);
 }
 
-.submit-btn:active {
+.submit-btn-new:active {
     transform: translateY(-1px);
 }
 
@@ -838,37 +940,56 @@ h2:hover {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    h2 {
-        font-size: 2rem;
-    }
-
-    .nav-links {
-        gap: 1rem;
-        font-size: 0.85rem;
-    }
-
-    .hero-description {
-        font-size: 1rem;
-    }
-
-    h2.tagline {
-        font-size: 1.3rem;
-    }
-
-    .achievements-grid {
+@media (max-width: 1024px) {
+    .contact-wrapper {
         grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact {
+        padding: 2rem 1rem;
     }
 
-    .achievement-card:hover {
-        transform: translateY(-10px) scale(1.01);
+    .contact-info-side h2 {
+        font-size: 1.8rem;
     }
 
-    .exp-card:hover {
-        transform: translateX(5px);
+    .contact-form-side {
+        padding: 1.5rem;
     }
+}
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+    border: 3px solid #60a5fa;
+    object-fit: cover;
+    animation: slideUp 0.8s ease-out;
+}
+/* Footer */
+.footer {
+    background: rgba(15, 23, 42, 0.9);
+    border-top: 1px solid rgba(96, 165, 250, 0.2);
+    padding: 2rem;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-top: 4rem;
+    animation: slideUp 0.8s ease-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer p {
+    margin: 0;
+    transition: all 0.3s ease;
+    flex: 1;
+}
+
+.footer p:hover {
+    color: #cbd5e1;
 }
