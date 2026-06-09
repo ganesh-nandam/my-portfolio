@@ -26,8 +26,8 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1><span class="hero-gradient">HELLO WORLD<br>I'M GANESH</span></h1>
-            <h2 class="tagline">Frontend Developer • Java Programmer • AI Enthusiast</h2>
+            <h1><span class="hero-gradient">HELLO<br>I'M GANESH</span></h1>
+            <h2 class="tagline">Frontend Developer • Java Programmer • AI Enthusiastic • CyberSecurity</h2>
             <p class="hero-description">
                 Seeking an opportunity to contribute my communication, digital engagement, and technical skills in a dynamic organization where I can learn, grow, and support impactful initiatives.
             </p>
@@ -56,7 +56,7 @@
                     Enthusiastic Computer Science engineering student with strong foundational skills in Java and web development. Passionate about problem-solving and building software solutions. Seeking challenging internships to apply my technical skills.
                 </p>
                 <p>
-                    I am currently focused on skill development and open to internships, projects, and opportunities that help me learn, grow, and contribute effectively. I have hands-on experience in both frontend and backend development, with a keen interest in emerging technologies.
+                    I am currently focused on skill development, intro to cybersecurity and computer networking and open to internships, projects, and opportunities that help me learn, grow, and contribute effectively. I have hands-on experience in both frontend and backend development, with a keen interest in emerging technologies.
                 </p>
                 <p>
                     My journey includes working on impactful projects that bridge technology with real-world problems, such as sustainable e-commerce platforms and exploring the potential of AI and generative models.
@@ -71,13 +71,14 @@
             <h2>Skills & Technologies</h2>
             <div class="skills-grid">
                 <div class="skill-card">Java</div>
-                <div class="skill-card">HTML5</div>
-                <div class="skill-card">CSS</div>
+                <!--<div class="skill-card">HTML5</div>-->
+                <!--<div class="skill-card">CSS</div>-->
                 <div class="skill-card">MySQL</div>
-                <div class="skill-card">Web Development</div>
+                <div class="skill-card">Fontened Development</div>
                 <div class="skill-card">Problem Solving</div>
-                <div class="skill-card">Generative AI</div>
-                <div class="skill-card">Prompt Engineering</div>
+                <!--<div class="skill-card">Generative AI</div>-->
+                <!--<div class="skill-card">Prompt Engineering</div>-->
+                <div class="skill-card">Time Management</div>
             </div>
         </div>
     </section>
@@ -90,8 +91,8 @@
                 <div class="exp-card">
                     <div class="exp-header">
                         <div>
-                            <h3 class="exp-title">Web Developer</h3>
-                            <p class="exp-company">Skill Craft Technology</p>
+                            <h3 class="exp-title">Web Developer Intern</h3>
+                            <p class="exp-company">Skill Craft Technology(virtual)</p>
                         </div>
                         <span class="exp-duration">1 month</span>
                     </div>
@@ -101,12 +102,12 @@
                 <div class="exp-card">
                     <div class="exp-header">
                         <div>
-                            <h3 class="exp-title">Java Developer</h3>
-                            <p class="exp-company">Ten Entrepreneurship Network</p>
+                            <h3 class="exp-title">Java Developer Intern</h3>
+                            <p class="exp-company">Ten Entrepreneurship Network(virtual)</p>
                         </div>
                         <span class="exp-duration">3 months</span>
                     </div>
-                    <p class="exp-description">Built backend systems and developed Java-based solutions for enterprise applications.</p>
+                    <p class="exp-description">I have acquired foundational knowledge in core Java, OOP, and JDBC, and I am now applying these skills to solve real-world problems.</p>
                 </div>
             </div>
         </div>
@@ -213,31 +214,68 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="contact-container">
-            <h2 class="contact-title">Get In Touch</h2>
-            <form class="form-container" onsubmit="handleSubmit(event)">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
+<section id="contact" class="contact">
+    <div class="contact-wrapper">
+        <!-- Left Side - Contact Info -->
+        <div class="contact-info-side">
+            <h2>Available For New Projects</h2>
+            
+            <!-- Email & Phone Side by Side -->
+            <div class="contact-cards-grid">
+                <!-- Email Card -->
+                <div class="contact-card">
+                    <div class="contact-card-icon">📧</div>
+                    <div class="contact-card-content">
+                        <p class="contact-label">Email Gateway</p>
+                        <p class="contact-value">ganeshnandam06@gmail.com</p>
+                    </div>
+                    <button class="copy-btn" onclick="copyToClipboard('ganeshnandam06@gmail.com')">📋</button>
                 </div>
 
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" required>
+                <!-- Phone Card -->
+                <div class="contact-card">
+                    <div class="contact-card-icon">📱</div>
+                    <div class="contact-card-content">
+                        <p class="contact-label">Phone Encrypted</p>
+                        <p class="contact-value">+91 8340057966</p>
+                    </div>
+                    <button class="copy-btn" onclick="copyToClipboard('+91 8340057966')">📋</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side - Form -->
+        <div class="contact-form-side">
+            <h3 class="form-heading">Secure Transmission Envelope</h3>
+            
+            <form class="form-container-new" onsubmit="handleSubmit(event)">
+                <div class="form-group-new">
+                    <label>Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name (e.g. John Doe)" required>
                 </div>
 
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+                <div class="form-group-new">
+                    <label>Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
                 </div>
 
-                <button type="submit" class="submit-btn">Send Message</button>
+                <div class="form-group-new">
+                    <label>Message Content</label>
+                    <textarea id="message" name="message" placeholder="Write your project details or recruitment inquiry here..." required style="min-height: 150px; resize: vertical;"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn-new">SEND SECURE MESSAGE →</button>
                 <div id="submitStatus"></div>
             </form>
         </div>
-    </section>
+    </div>
+</section>
 
     <script src="script.js"></script>
+
+    <!-- Footer -->
+<footer class="footer">
+    <p>&copy; 2026 . Ganesh Nandam. </p>
+</footer>
 </body>
 </html>
